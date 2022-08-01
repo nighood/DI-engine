@@ -14,8 +14,6 @@ lunarlander_r2d2_config = dict(
     policy=dict(
         cuda=True,
         on_policy=False,
-        # priority=True,
-        # priority_IS_weight=True,
         priority=False,
         priority_IS_weight=False,
         model=dict(
@@ -77,7 +75,7 @@ lunarlander_r2d2_create_config = dict(
         type='lunarlander',
         import_names=['dizoo.box2d.lunarlander.envs.lunarlander_env'],
     ),
-    env_manager=dict(type='subprocess'),
+    env_manager=dict(type='base'),
     policy=dict(type='r2d2'),
 )
 lunarlander_r2d2_create_config = EasyDict(lunarlander_r2d2_create_config)
